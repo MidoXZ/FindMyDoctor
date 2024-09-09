@@ -1,0 +1,64 @@
+{% load static%}
+
+{% block content %}     {% endblock content%}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shop</title>
+   
+    <link rel="stylesheet" href="{% static 'HomePage/js&css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'HomePage/js&css/login.css' %}">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body style="background-image: url(https://thumbs.dreamstime.com/z/group-doctors-standing-line-keeping-arms-crossed-looking-camera-modern-clinic-professional-uniform-high-quality-250784675.jpg)
+; background-size: cover ">
+
+    <header>
+      
+<nav>
+            <div class="links container">
+                <ul>
+                    <li><a href="{% url 'MyDoctorHome'%}">Home</a></li>
+                    <li><a href="{% url 'MyDoctorProfile'%}">Profile</a></li>
+                    <li><a href="#">Contact</a> </li>
+                </ul>
+
+                <div class="loging_signup">
+                                    
+                    {%if not login_flag %}
+                            <a href="{% url 'MyDoctorLogin'%}">login <i class="fa-solid fa-right-to-bracket"></i></a>
+                    {%else%}
+                        <a href="{% url 'MyDoctorLogout'%}">logout <i class="fa-solid fa-right-to-bracket"></i></a>
+                    {%endif%}
+                    
+                    
+                    
+                    <a href="{% url 'MyDoctorSignup'%}">sign up <i class="fa-solid fa-user-plus"></i></a>
+                </div>
+
+            </div>
+</nav>
+
+
+
+
+</body>
+
+
+
+ 
+        
+
+        {% comment %} <script src="{%static 'HomePage/js&css/script.js' %}"></script> {% endcomment %}
+        {% comment %} <script src="{%static 'HomePage/js&css/items home.js' %}"></script> {% endcomment %}
+    </body>
+    
+    </html>
+
+

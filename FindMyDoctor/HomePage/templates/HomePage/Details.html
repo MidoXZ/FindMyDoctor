@@ -1,0 +1,25 @@
+{% extends "HomePage/Base.html" %}
+ {%load static%}
+
+ {%block content%}
+
+
+<body align="center">
+ <h2>Doctor Details</h2>
+ 
+
+ <div id="doc_list" align="center" style="margin-left: 40%">
+ <p><strong>Name:</strong> {{ doctor.Name }}</p>
+ <p><strong>Phone:</strong> {{ doctor.Phone }}</p>
+ <p><strong>Address:</strong> {{ doctor.Adress }}</p>
+ <p><strong>Specialization:</strong> {{ doctor.Specialization }}</p>
+ </div>
+ <br>
+
+ <h3><a href="{% url 'MyDoctorHome' %}">Back to Search</a></h3>
+
+</body>
+
+
+ 
+ {%endblock%}

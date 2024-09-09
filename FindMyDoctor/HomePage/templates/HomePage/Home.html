@@ -1,0 +1,69 @@
+{% extends "HomePage/Base.html" %}
+
+ {%load static%}
+
+ {%block content%}
+
+ 
+ <body>
+
+    {%if not login_flag %}
+        <h2 class="msg">
+            Please Login to enjoy more features
+        </h2>
+    {%else%}
+        <h2 class="msg">
+            Welcome {{request.user.first_name}} to Find My Doctor :)
+        </h2>
+    {%endif%}
+
+<br>
+    <div class="container" align="center">
+        <form method="GET" action="{% url 'MyDoctorHome' %}">
+            <label for="Adress">Select Adress:</label>
+            <select name="Adress" id="Adress">
+                <option value="">All</option> 
+                <option value="Giza">Giza</option>
+                <option value="Cairo">Cairo</option>
+                <option value="Alexandria">Alexandria</option>
+                
+            </select>
+            
+            <label for="Specialization"> Choose a Specialization</label>
+            <select name="Specialization" id="Specialization">
+                <option value="">All</option> 
+                <option value="Dental">Dental</option>
+                <option value="Heart">Heart</option>
+                <option value="Stomach">Stomach</option>
+            </select>
+    
+            
+            <button type="submit">Search</button>
+        </form>
+
+
+    </div>
+    <br><br><br>
+    <div align="center">
+    <ul id="doc_list" >
+        {% for doctor in doctors %}
+        <a href="{% url 'MyDoctorDetails' doctor.id %}">{{ doctor.Name }}</a> <br>
+        {% empty %}
+            <li>No results found.</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+</body>
+        
+
+
+
+
+
+{%endblock%}
+
+
+

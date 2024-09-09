@@ -1,0 +1,54 @@
+{% extends "HomePage/base.html"%}
+
+
+{%block content%}
+
+
+    {% if message %}
+    <div> {{message}} </div>
+    {% endif%}
+
+    
+    <section class="signin sec_form">
+        <div class="form_container">
+            <p class="title">Welcome</p>
+
+            <form action="{% url 'MyDoctorSignup'%}" method="post" class="form">
+                {% csrf_token %}
+                <input type="text" placeholder="User name" name="username" required minlength="6">
+                <input type="text" placeholder="First name" name="first_name" required>
+                <input type="text" placeholder="Last name" name="last_name" required>
+                <input type="email" placeholder="Email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                
+                <input type="password" placeholder="Password" name="password1" required minlength="8">
+                <input type="password" placeholder="Confirm Password" name="password2" required minlength="8">
+                
+                
+                <button class="form-btn">Sign up</button>
+
+            </form>
+
+            <p class="sign-up-label">
+                Already have an Account? <a href="{% url 'MyDoctorLogin'%}" class="sign-up-link">Login in</a>
+            </p>
+
+            <div class="buttons-container">
+                <div class="apple-login-button">
+                    <i class="fa-brands fa-apple"></i>
+                    <span>login with Apple</span>
+                </div>
+
+                <div class="google-login-button">
+                    <i class="fa-brands fa-google"></i>
+                    <span>login with Google</span>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+
+{%endblock%}

@@ -1,0 +1,52 @@
+{% extends "HomePage/base.html"%}
+
+
+{%block content%}
+
+    {% if message %}
+        <div> {{message}} </div>
+    {% endif%}
+
+
+    <section class="signin sec_form">
+        <div class="form_container">
+            <p class="title">Welcome back</p>
+
+            <form action="{% url 'MyDoctorLogin'%}" method="post" class="form">
+                {% csrf_token %}
+                <input type="text" placeholder="Username" name="username" required>
+                <input type="password" placeholder="Password" name="password" required minlength="8">
+                <p class="page-link">
+                    <a href="#" class="page-link-label">Forgot Password?</a>
+                </p>
+                
+                <button class="form-btn">Login</button>
+
+            </form>
+
+            <p class="sign-up-label">
+                Don't have an Account? <a href="{% url 'MyDoctorSignup'%}" class="sign-up-link">Sign up</a>
+            </p>
+
+            <div class="buttons-container">
+                <div class="apple-login-button">
+                    <i class="fa-brands fa-apple"></i>
+                    <span>login with Apple</span>
+                </div>
+
+                <div class="google-login-button">
+                    <i class="fa-brands fa-google"></i>
+                    <span>login with Google</span>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+
+  
+ 
+{% endblock %}

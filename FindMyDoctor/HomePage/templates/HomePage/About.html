@@ -1,0 +1,129 @@
+{% extends "HomePage/Base.html" %}
+
+{%load static%}
+
+{%block content%}
+
+<body style="background-image: url("{% static 'HomePage/images/Background2.jpg' %}"); background-size: cover;">
+    <table id="table_top" width="100%" border="2px" cellpadding="30px"  cellspacing="5px">
+        <thead>
+            <tr style="background-color: green; margin: 0%; " >
+                <th colspan="3"><img src="{% static 'HomePage/images/googlelogo_color_272x92dp.png' %}" alt="logo"></th>
+            </tr>
+            <tr style="background-color: rgb(86, 128, 45);margin: 0%">
+                <th colspan="3">
+                    <div style="text-align: center;">
+                        <a href="Home.html">Home</a>
+                        <a href="Home.html">Contact Us</a>
+                        <a href="Home.html">About</a>
+                    </div>
+                </th>
+
+            </tr>
+        
+        </thead>    
+        <tbody>
+            <tr colspan="3">
+                    <td width="20%" style="background-color: darkolivegreen;">
+                        <div>
+                            <ul>
+                                <ol>
+                                    <label for="username">username</label>
+                                    <input type="text" name="username" placeholder="please enter your name">
+                                    <label for="password">password</label>
+                                    <input type="password" name="password" placeholder="Please enter your pass">
+                                    <input type="image" alt="click me!" src="{% static 'HomePage/images/round-arrow-top-icon.png' %}"
+                                    width="30px" height="30px">
+
+                                </ol>
+                            </ul>
+
+                        </div>
+                        <hr>
+                        <div style="text-align: center;">
+                            <h3>My pages online</h3>
+
+                            <a href="https://www.facebook.com/profile.php?id=100010316313493"
+                            target="_blank" rel="noopener noreferrer">
+                            <img src="{% static "HomePage/images/facebook.png" %}" alt="facebook" width=" 100" height="100"></a>
+                    
+                            <br>
+
+                            <a href="https://www.linkedin.com/in/mido-essam-2aa301244/"
+                            target="_blank" rel="noopener norefferer">
+                                <img src="{% static "HomePage/images/linkedin.png" %}" alt="linkedin" width=" 100" height="100">
+                            </a>   
+                        </div>
+                        <hr>
+                        <iframe width="250" height="180" 
+                        src="https://www.youtube.com/embed/2mRlUWNIPzo?si=TJF2colWPx4E42Jj" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+                        </iframe>
+
+                    </td>
+                    <td style="background-color: darkolivegreen; vertical-align: top; ">
+                        <div>
+                        <h2 style="color: red; text-align: center;">My Profile</h2>
+                        <ul>
+                            <li>Name: Mohammed Essam Ibrahim</li>
+                            <li>Age: 22</li>
+                            <li>Adress: Giza,Shikh Zayed</li>
+                            <li>Phone: 
+                                <ol type="A">
+                                    <li>01116170216</li>
+                                    <li>01115664350</li>
+                                </ol>
+                            </li>
+                            <li><a href="https://www.facebook.com/FacultyofScienceHU/"
+                                target="_blank" rel="noopener noreferrer">
+                                Faculty of Science</a></li>
+                            <li>Graduates in 2025</li>
+                            <li>Like:
+                                <ol type="1">
+                                    <li>Reading</li>
+                                    <li>Gaming</li>
+                                    <li>Eating</li>
+                                </ol>
+                            </li>
+                            <li><a href="mailto:Midoessam2004@gmail.com">Send me Mail</a></li>
+                        </ul>
+                        </div>
+
+                    </td>
+                    <td style="background-color: darkolivegreen;vertical-align: top">
+                        <img src="{% static "HomePage/images/20210904_020648.jpg" %}" alt="My Photo" 
+                        width="150" height="150">
+                        <hr>
+                        <h3>News</h3>
+
+
+
+                    </td>
+
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <tr style="background-color: darkolivegreen;">
+                <td colspan="3" style=" text-align: center;">
+                <a href="Home2.html#top">top of the page</a>
+                <p style="color: red;text-align: center;">
+                Copyrights © are reserved to ITI.</p>
+            
+            </td>
+            </tr>
+
+        </tfoot>
+
+    </table>
+
+
+{%endblock%}
+
+</body>
+
+</html>
